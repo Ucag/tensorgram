@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张量无垠 | AI人工智能解决方案提供商</title>
+    <meta name="description" content="张量无垠是一家专注于人工智能技术研发的高科技公司，提供海量文档提取、端侧数字人、短视频生成、VLA具身智能等领先的人工智能解决方案。">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 动态背景层 -->
+    <div class="dynamic-bg">
+        <canvas id="bgCanvas"></canvas>
+        <div class="bg-overlay"></div>
+    </div>
+
+    <!-- 导航栏 -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-brain"></i></span>
+                <span class="logo-text">张量无垠</span>
+            </a>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">首页</a></li>
+                    <li><a href="#about" class="nav-link">关于我们</a></li>
+                    <li><a href="#products" class="nav-link">核心产品</a></li>
+                    <li><a href="#solutions" class="nav-link">解决方案</a></li>
+                    <li><a href="#cases" class="nav-link">应用案例</a></li>
+                    <li><a href="#news" class="nav-link">新闻动态</a></li>
+                    <li><a href="#contact" class="nav-link">联系我们</a></li>
+                </ul>
+            </nav>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 首页 -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>人工智能领域创新领导者</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">释放AI潜能</span>
+                <span class="title-line accent">共创智能未来</span>
+            </h1>
+            <p class="hero-desc">
+                专注于端侧人工智能技术研发，为企业提供从文档智能解析到具身智能控制的全栈AI解决方案
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item" data-count="10">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">+ 核心技术专利</span>
+                </div>
+                <div class="stat-item" data-count="50">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">+ 企业合作伙伴</span>
+                </div>
+                <div class="stat-item" data-count="98">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">% 客户满意度</span>
+                </div>
+            </div>
+            <div class="hero-btns">
+                <a href="#products" class="btn btn-primary">
+                    <span>探索我们的技术</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <span>联系我们</span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="tech-orb">
+                <div class="orb-core"></div>
+                <div class="orb-ring ring-1"></div>
+                <div class="orb-ring ring-2"></div>
+                <div class="orb-ring ring-3"></div>
+            </div>
+            <div class="tech-particles" id="particles"></div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>向下滚动探索</span>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Us</span>
+                <h2 class="section-title">关于<span class="accent">张量无垠</span></h2>
+                <p class="section-desc">深耕人工智能技术，引领行业创新变革</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="frame-glow"></div>
+                        <div class="frame-content">
+                            <div class="ai-brain">
+                                <div class="neuron n1"></div>
+                                <div class="neuron n2"></div>
+                                <div class="neuron n3"></div>
+                                <div class="neuron n4"></div>
+                                <div class="neuron n5"></div>
+                                <svg class="neural-lines" viewBox="0 0 200 200">
+                                    <line x1="50" y1="50" x2="150" y2="50" class="line" />
+                                    <line x1="50" y1="100" x2="150" y2="100" class="line" />
+                                    <line x1="50" y1="150" x2="150" y2="150" class="line" />
+                                    <line x1="100" y1="30" x2="100" y2="170" class="line" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>用AI技术赋能千行百业</h3>
+                    <p>张量无垠成立于人工智能技术飞速发展的时代，核心团队由来自国内外顶尖高校和科技企业的资深专家组成。我们专注于端侧人工智能技术的研发与创新，致力于为企业提供高效、安全、智能的AI解决方案。</p>
+                    <p>公司已在海量文档内容提取、端侧实时数字人、短视频自动生成、端侧VLA具身智能控制等多个领域取得突破性进展，技术实力位居行业前列。</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
+                            <div class="feature-text">
+                                <h4>创新驱动</h4>
+                                <p>持续投入研发，掌握核心算法</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="feature-text">
+                                <h4>安全可靠</h4>
+                                <p>端侧部署，保障数据隐私</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-rocket"></i></div>
+                            <div class="feature-text">
+                                <h4>高效便捷</h4>
+                                <p>一站式部署，快速落地应用</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心产品与技术 -->
+    <section class="section products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Core Technology</span>
+                <h2 class="section-title">核心产品与<span class="accent">技术</span></h2>
+                <p class="section-desc">四大核心技术平台，助力企业智能化升级</p>
+            </div>
+            <div class="products-grid">
+                <!-- 产品1：文档智能提取 -->
+                <div class="product-card">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>海量文档智能提取系统</h3>
+                        <p class="card-tag">DocuMind AI</p>
+                        <p class="card-desc">基于深度学习的多模态文档理解引擎，支持PDF、Word、图片、扫描件等海量复杂文档的结构化信息提取，实现文档到数据的智能转化。</p>
+                        <div class="card-features">
+                            <span><i class="fas fa-check"></i> 多格式支持</span>
+                            <span><i class="fas fa-check"></i> 高精度识别</span>
+                            <span><i class="fas fa-check"></i> 自动分类</span>
+                        </div>
+                        <div class="card-stats">
+                            <div class="mini-stat">
+                                <span class="ms-value">99.2%</span>
+                                <span class="ms-label">识别准确率</span>
+                            </div>
+                            <div class="mini-stat">
+                                <span class="ms-value">1000+</span>
+                                <span class="ms-label">页/秒处理</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-visual">
+                        <div class="doc-animation">
+                            <div class="doc doc-1"></div>
+                            <div class="doc doc-2"></div>
+                            <div class="doc doc-3"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 产品2：端侧数字人 -->
+                <div class="product-card">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-user-astronaut"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>端侧实时数字人系统</h3>
+                        <p class="card-tag">DigitalHuman Edge</p>
+                        <p class="card-desc">端侧轻量化部署的实时数字人驱动引擎，支持文本、语音驱动的数字人实时交互，适用于智能客服、虚拟主播、教育培训等场景。</p>
+                        <div class="card-features">
+                            <span><i class="fas fa-check"></i> 实时渲染</span>
+                            <span><i class="fas fa-check"></i> 低延迟响应</span>
+                            <span><i class="fas fa-check"></i> 多语言支持</span>
+                        </div>
+                        <div class="card-stats">
+                            <div class="mini-stat">
+                                <span class="ms-value">50ms</span>
+                                <span class="ms-label">端到端延迟</span>
+                            </div>
+                            <div class="mini-stat">
+                                <span class="ms-value">20GB</span>
+                                <span class="ms-label">内存占用</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-visual">
+                        <div class="human-animation">
+                            <div class="avatar-circle">
+                                <div class="avatar-face"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 产品3：短视频生成 -->
+                <div class="product-card">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-video"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>短视频自动生成系统</h3>
+                        <p class="card-tag">VideoGen AI</p>
+                        <p class="card-desc">基于AIGC的智能视频创作平台，支持文案生成、视频剪辑、特效添加、配音合成的一站式短视频自动化生产。</p>
+                        <div class="card-features">
+                            <span><i class="fas fa-check"></i> 智能剪辑</span>
+                            <span><i class="fas fa-check"></i> AI配音</span>
+                            <span><i class="fas fa-check"></i> 模板丰富</span>
+                        </div>
+                        <div class="card-stats">
+                            <div class="mini-stat">
+                                <span class="ms-value">10x</span>
+                                <span class="ms-label">生产效率</span>
+                            </div>
+                            <div class="mini-stat">
+                                <span class="ms-value">500+</span>
+                                <span class="ms-label">模板素材</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-visual">
+                        <div class="video-animation">
+                            <div class="film-strip">
+                                <div class="frame"></div>
+                                <div class="frame"></div>
+                                <div class="frame"></div>
+                                <div class="frame"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 产品4：VLA具身智能 -->
+                <div class="product-card">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>端侧VLA具身智能控制系统</h3>
+                        <p class="card-tag">VLA Robotics</p>
+                        <p class="card-desc">融合视觉、语言、动作的端侧具身智能控制系统，支持机器人、无人机、智能设备的多模态感知与自主决策。</p>
+                        <div class="card-features">
+                            <span><i class="fas fa-check"></i> 多模态融合</span>
+                            <span><i class="fas fa-check"></i> 实时推理</span>
+                            <span><i class="fas fa-check"></i> 低功耗运行</span>
+                        </div>
+                        <div class="card-stats">
+                            <div class="mini-stat">
+                                <span class="ms-value">100TOPS</span>
+                                <span class="ms-label">算力需求</span>
+                            </div>
+                            <div class="mini-stat">
+                                <span class="ms-value">10ms</span>
+                                <span class="ms-label">响应时间</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-visual">
+                        <div class="robot-animation">
+                            <div class="robot-arm">
+                                <div class="arm-segment"></div>
+                                <div class="arm-segment"></div>
+                                <div class="arm-gripper"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 解决方案 -->
+    <section class="section solutions" id="solutions">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Solutions</span>
+                <h2 class="section-title">行业<span class="accent">解决方案</span></h2>
+                <p class="section-desc">针对不同行业定制智能化升级路径</p>
+            </div>
+            <div class="solutions-tabs">
+                <button class="tab-btn active" data-tab="finance">
+                    <i class="fas fa-university"></i>
+                    <span>金融服务</span>
+                </button>
+                <button class="tab-btn" data-tab="manufacturing">
+                    <i class="fas fa-industry"></i>
+                    <span>智能制造</span>
+                </button>
+                <button class="tab-btn" data-tab="retail">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>零售消费</span>
+                </button>
+                <button class="tab-btn" data-tab="education">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>教育培训</span>
+                </button>
+            </div>
+            <div class="solutions-content">
+                <div class="solution-panel active" id="finance">
+                    <div class="solution-info">
+                        <h3>金融服务行业解决方案</h3>
+                        <p>为金融机构提供智能文档处理、风险控制、客户服务等全流程AI赋能。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-arrow-right"></i> 智能合同审核与分析</li>
+                            <li><i class="fas fa-arrow-right"></i> 自动化贷款审批流程</li>
+                            <li><i class="fas fa-arrow-right"></i> 智能反欺诈检测</li>
+                            <li><i class="fas fa-arrow-right"></i> 数字人客服与理财顾问</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">获取方案详情</a>
+                    </div>
+                    <div class="solution-visual">
+                        <div class="visual-finance">
+                            <div class="solution-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="solution-panel" id="manufacturing">
+                    <div class="solution-info">
+                        <h3>智能制造行业解决方案</h3>
+                        <p>为制造企业提供生产优化、质量检测、设备维护等智能化升级服务。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-arrow-right"></i> 视觉缺陷检测系统</li>
+                            <li><i class="fas fa-arrow-right"></i> 预测性设备维护</li>
+                            <li><i class="fas fa-arrow-right"></i> 智能生产排程</li>
+                            <li><i class="fas fa-arrow-right"></i> 机器人柔性控制系统</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">获取方案详情</a>
+                    </div>
+                    <div class="solution-visual">
+                        <div class="visual-finance">
+                            <div class="solution-icon">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="solution-panel" id="retail">
+                    <div class="solution-info">
+                        <h3>零售消费行业解决方案</h3>
+                        <p>为零售企业提供智能营销、库存管理、客户服务等数字化转型支持。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-arrow-right"></i> AI内容营销生成</li>
+                            <li><i class="fas fa-arrow-right"></i> 智能商品推荐</li>
+                            <li><i class="fas fa-arrow-right"></i> 虚拟主播带货</li>
+                            <li><i class="fas fa-arrow-right"></i> 智能库存预测</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">获取方案详情</a>
+                    </div>
+                    <div class="solution-visual">
+                        <div class="visual-finance">
+                            <div class="solution-icon">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="solution-panel" id="education">
+                    <div class="solution-info">
+                        <h3>教育培训行业解决方案</h3>
+                        <p>为教育机构提供智能教学、个性化学习、虚拟教师等创新应用。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-arrow-right"></i> AI虚拟教师</li>
+                            <li><i class="fas fa-arrow-right"></i> 智能作业批改</li>
+                            <li><i class="fas fa-arrow-right"></i> 个性化学习推荐</li>
+                            <li><i class="fas fa-arrow-right"></i> 沉浸式VR教学</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">获取方案详情</a>
+                    </div>
+                    <div class="solution-visual">
+                        <div class="visual-finance">
+                            <div class="solution-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 应用案例 -->
+    <section class="section cases" id="cases">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Success Stories</span>
+                <h2 class="section-title">应用<span class="accent">案例</span></h2>
+                <p class="section-desc">已助力数百家企业实现智能化转型</p>
+            </div>
+            <div class="cases-carousel">
+                <div class="cases-track">
+                    <div class="case-card">
+                        <div class="case-image">
+                            <div class="case-img"
+                                style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
+                                <div class="case-overlay">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-content">
+                            <span class="case-tag">金融服务</span>
+                            <h3>某大型银行智能文档处理项目</h3>
+                            <p>为银行部署文档智能提取系统，实现合同、凭证的自动化处理，效率提升300%。</p>
+                            <div class="case-metrics">
+                                <div class="metric">
+                                    <span class="m-value">300%</span>
+                                    <span class="m-label">效率提升</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="m-value">99%</span>
+                                    <span class="m-label">准确率</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-image">
+                            <div class="case-img"
+                                style="background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);">
+                                <div class="case-overlay">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-content">
+                            <span class="case-tag">客户服务</span>
+                            <h3>某电商平台数字人客服项目</h3>
+                            <p>部署端侧数字人客服系统，提供7×24小时智能化服务，客户满意度显著提升。</p>
+                            <div class="case-metrics">
+                                <div class="metric">
+                                    <span class="m-value">80%</span>
+                                    <span class="m-label">问题解决率</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="m-value">50%</span>
+                                    <span class="m-label">成本降低</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-image">
+                            <div class="case-img"
+                                style="background: linear-gradient(135deg, #1a1a2e 0%, #0f0f23 100%);">
+                                <div class="case-overlay">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-content">
+                            <span class="case-tag">内容营销</span>
+                            <h3>某品牌短视频自动生成项目</h3>
+                            <p>采用短视频自动生成系统，实现日产千条营销视频，营销效率大幅提升。</p>
+                            <div class="case-metrics">
+                                <div class="metric">
+                                    <span class="m-value">1000+</span>
+                                    <span class="m-label">日产视频</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="m-value">200%</span>
+                                    <span class="m-label">流量增长</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-image">
+                            <div class="case-img"
+                                style="background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);">
+                                <div class="case-overlay">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-content">
+                            <span class="case-tag">智能制造</span>
+                            <h3>某制造企业VLA控制项目</h3>
+                            <p>部署VLA具身智能控制系统，实现生产线的柔性化改造，产能提升40%。</p>
+                            <div class="case-metrics">
+                                <div class="metric">
+                                    <span class="m-value">40%</span>
+                                    <span class="m-label">产能提升</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="m-value">60%</span>
+                                    <span class="m-label">人工减少</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cases-nav">
+                <button class="nav-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="nav-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新闻动态 -->
+    <section class="section news" id="news">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">News & Updates</span>
+                <h2 class="section-title">新闻<span class="accent">动态</span></h2>
+                <p class="section-desc">了解最新技术进展与行业资讯</p>
+            </div>
+            <div class="news-grid">
+                <article class="news-card featured">
+                    <div class="news-image">
+                        <div class="news-img" style="background: linear-gradient(45deg, #1a1a2e, #16213e);">
+                            <span class="news-badge">热门</span>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date">2025年3月1日</span>
+                        <h3>张量无垠发布新一代端侧数字人引擎，实时交互再升级</h3>
+                        <p>新一代DigitalHuman Edge 3.0版本支持更自然的微表情和肢体语言，端到端延迟降至50ms以内，为企业客户提供更优质的虚拟服务体验。</p>
+                        <a href="#" class="read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <div class="news-img" style="background: linear-gradient(45deg, #0f3460, #1a1a2e);"></div>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date">2025年8月20日</span>
+                        <h3>获评"2025年度最佳人工智能创新企业"</h3>
+                        <p>在刚刚结束的全国AI峰会上，张量无垠凭借在端侧AI领域的突出贡献，荣获年度最佳创新企业奖项。</p>
+                        <a href="#" class="read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <div class="news-img" style="background: linear-gradient(45deg, #1a1a2e, #0f3460);"></div>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date">2026年1月15日</span>
+                        <h3>发布VLA具身智能开发套件</h3>
+                        <p>面向开发者推出VLA Robotics DevKit，帮助企业快速构建智能机器人应用。</p>
+                        <a href="#" class="read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contact Us</span>
+                <h2 class="section-title">联系我们</h2>
+                <p class="section-desc">期待与您携手共创智能未来</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>公司地址</h4>
+                            <p>成都市新川创新科技园AI创新中心</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>商务合作</h4>
+                            <p>info@tensorgram.ai</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>联系电话</h4>
+                            <p>+86 18030546956</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>工作时间</h4>
+                            <p>周一至周五 9:00-18:00</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-header">
+                        <h3>发送消息</h3>
+                        <p>填写以下信息，我们的团队将尽快与您联系</p>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" name="name" placeholder="请输入您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱</label>
+                            <input type="email" id="email" name="email" placeholder="请输入您的邮箱" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">公司</label>
+                        <input type="text" id="company" name="company" placeholder="请输入公司名称">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">主题</label>
+                        <select id="subject" name="subject">
+                            <option value="">请选择咨询主题</option>
+                            <option value="product">产品咨询</option>
+                            <option value="solution">解决方案</option>
+                            <option value="cooperation">商务合作</option>
+                            <option value="other">其他</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">留言</label>
+                        <textarea id="message" name="message" rows="5" placeholder="请描述您的需求..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <span>提交消息</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path fill="currentColor" d="M0,50 C360,100 1080,0 1440,50 L1440,100 L0,100 Z"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon"><i class="fas fa-brain"></i></span>
+                        <span class="logo-text">张量无垠</span>
+                    </a>
+                    <p>致力于成为全球领先的人工智能解决方案提供商</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>快速链接</h4>
+                        <ul>
+                            <li><a href="#about">关于我们</a></li>
+                            <li><a href="#products">核心产品</a></li>
+                            <li><a href="#solutions">解决方案</a></li>
+                            <li><a href="#cases">应用案例</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>技术支持</h4>
+                        <ul>
+                            <li><a href="#">技术文档</a></li>
+                            <li><a href="#">API文档</a></li>
+                            <li><a href="#">开发者中心</a></li>
+                            <li><a href="#">常见问题</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>法律信息</h4>
+                        <ul>
+                            <li><a href="#">隐私政策</a></li>
+                            <li><a href="#">服务条款</a></li>
+                            <li><a href="#">Cookie政策</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 张量无垠科技有限公司 版权所有 | 川ICP备2023002832号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
